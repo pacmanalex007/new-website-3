@@ -1,0 +1,31 @@
+@media screen {
+*{cursor:default;}
+body{background-color: black;}
+.welcome{font-size:3em;color:white;box-shadow:-2.5px 5px 25px 0.01em white;width:25%;}
+.under-construction{font-size:2em;color:green;} .update-1{font-size:2em;color:silver;}
+.click-to-enter{font-size:2em;color:lightblue;}
+.new-beginning{font-size:1.77em;color:white;font-family:Barlow;width:70%;}
+.click-to-view-updates{font-size:1.5em;color:gold;text-align:center;width:50%;}
+}
+
+
+@media only screen and (max-width : 1240px) {
+*{cursor:default;}
+body{background-color: black;}
+.welcome{font-size:3em;color:white;box-shadow:-2.5px 5px 25px 0.01em white;width:25%;}
+.under-construction{font-size:2em;color:green;} .update-1{font-size:2em;color:silver;}
+.click-to-enter{font-size:2em;color:lightblue;}
+.new-beginning{font-size:1.77em;color:white;font-family:Barlow;width:70%;}
+.click-to-view-updates{font-size:1.5em;color:gold;text-align:center;width:50%;}
+}
+
+@media only screen and (max-width : 1080px) {
+*{cursor:default;}
+body{background-color: black;}
+.welcome{font-size:2em;color:white;box-shadow:-2.5px 5px 25px 0.01em white;width:70%;}
+.under-construction{font-size:1em;color:green;} .update-1{font-size:2em;color:silver;}
+.click-to-enter{font-size:2em;color:lightblue;}
+.new-beginning{font-size:1.1em;color:white;font-family:Barlow;width:100%;}
+.click-to-view-updates{font-size:1.25em;color:gold;text-align:center;width:70%;}
+}
+

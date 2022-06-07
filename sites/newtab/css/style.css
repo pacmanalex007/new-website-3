@@ -1,0 +1,178 @@
+.jKndbJ {
+    grid-column: 3 / auto;
+    justify-self: center;
+}
+.ciwURu {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: fit-content;
+    min-width: 0px;
+    position: relative;
+}
+.fTsMns {
+    padding: 24px 56px 24px 24px;
+    max-width: 100%;
+    width: initial;
+    position: relative;
+    transition: background 0.5s ease 0s;
+    border-radius: 16px;
+}
+.kllwoA {
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    line-height: 1;
+    user-select: none;
+    display: flex;
+    -webkit-font-smoothing: antialiased;
+    font-family: Poppins, sans-serif;
+}
+.eFSSPA {
+    box-sizing: border-box;
+    font-size: 78px;
+    font-weight: 300;
+    color: inherit;
+    display: inline-flex;
+}
+.cbDjbC {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+}
+.laCBqL {
+    visibility: hidden;
+    pointer-events: none;
+}
+.kbcVUm {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    margin: 7px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    opacity: 0.7;
+    transition: opacity 0.15s ease 0s, filter 0.15s ease 0s;
+}
+svg {
+    fill: currentColor;
+}
+* {
+    box-sizing: border-box;
+}
+
+.fTsMns {
+    padding: 24px 56px 24px 24px;
+    max-width: 100%;
+    width: initial;
+    position: relative;
+    transition: background 0.5s ease 0s;
+    border-radius: 16px;
+}
+.gYoENa {
+    --bg-opacity: 1;
+    position: relative;
+    padding-top: var(--ntp-fixed-content-height,"0px");
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    transition: opacity 0.125s ease-out 0s;
+    opacity: 1;
+}
+.iEHcmr {
+    grid-column: 1 / span 2;
+}
+article, aside, footer, header, nav, section {
+    display: block;
+}
+.gNulqn {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    height: fit-content;
+    min-width: 0px;
+    position: relative;
+}
+.fTsMns {
+    padding: 24px 56px 24px 24px;
+    max-width: 100%;
+    width: initial;
+    position: relative;
+    transition: background 0.5s ease 0s;
+    border-radius: 16px;
+}
+.fFjUvJ {
+    -webkit-font-smoothing: antialiased;
+    display: inline-flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: var(--ntp-item-justify,start);
+    justify-content: var(--ntp-item-justify,start);
+    -webkit-box-align: start;
+    align-items: start;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+.xzEJa:first-child {
+    color: rgb(251, 84, 43);
+}
+.xzEJa {
+    list-style-type: none;
+    font-size: inherit;
+    font-family: inherit;
+    margin: 10px 16px;
+}
+.xzEJa:nth-child(2) {
+    color: rgb(160, 165, 235);
+}
+.xzEJa:last-child {
+    color: rgb(255, 255, 255);
+    margin-right: 0px;
+}
+.xzEJa {
+    list-style-type: none;
+    font-size: inherit;
+    font-family: inherit;
+    margin: 10px 16px;
+}
+.xzEJa {
+    list-style-type: none;
+    font-size: inherit;
+    font-family: inherit;
+    margin: 10px 16px;
+}
+.hRpSDR {
+    --ntp-item-row-count: 4;
+    --ntp-extra-footer-rows: 1;
+    --ntp-space-rows: 0;
+    --ntp-page-rows: calc(var(--ntp-item-row-count) + var(--ntp-space-rows));
+    --ntp-page-padding: 12px;
+    --ntp-item-justify: start;
+    --blur-amount: calc(var(--ntp-extra-content-effect-multiplier,0) * 38px);
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(calc(var(--ntp-page-rows) - 1),min-content) auto;
+    grid-template-columns: min-content auto min-content;
+    grid-auto-flow: row dense;
+    padding: var(--ntp-page-padding);
+    overflow: hidden;
+    flex: 1 1 0%;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 100vh;
+    align-items: flex-start;
+}

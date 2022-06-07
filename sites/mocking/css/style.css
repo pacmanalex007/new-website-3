@@ -1,0 +1,8 @@
+* {
+  text-align: center;
+  layout: inline-block;
+}
+textarea {
+  width: 500px;
+  height: 100px;
+}

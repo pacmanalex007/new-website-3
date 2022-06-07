@@ -1,0 +1,36 @@
+/************************************************/
+/* LeanBack Player | HTML5 Video Player UI		*/
+/* Release: 0.0.2 - HD Button Extension	        */
+/************************************************/
+/*************************************/
+/* Video-Viewport HD Button position */
+.h5_lb_player div.hdbtn {
+	position: absolute; margin: 0; padding: 5px; top: auto; bottom: 45px !important; left: 8px; border: 1px solid transparent; display: none; z-index: 1001;
+	border: 1px solid #000; color: #fff; font: 10px/1.231 "bitstream vera sans", "lucida grande", verdana !important; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	/* Background Fallback for web browsers doesn't support RGBa */
+	background: #000;
+	/* Background RGBa with 0.4 opacity */
+	background: rgba(0, 0, 0, 0.4);
+}
+.h5_lb_player div.hdbtn:hover {
+	/* Background RGBa with 0.7 opacity */
+	background: rgba(0, 0, 0, 0.7);
+}
+
+div.hdbtn span.hdbtn_txt {display: inline-block; font-weight: bold; float: left;}
+div.hdbtn span.hdbtn_state {display: none; font-weight: normal; margin-left: 2px;}
+div.hdbtn:hover span.hdbtn_state {display: inline-block;}
+.h5_lb_player img.hdbtn {position: absolute; margin: 0; top: auto; bottom: 45px !important; left: 8px; border: 1px solid transparent; display: none; z-index: 1001;}
+.h5_lb_player div.hdbtn_controls_below, .h5_lb_player img.hdbtn_controls_below {
+	bottom: 15px !important;
+}
+
+/*************************/
+/* ControlsBar HD Button */
+.h5_lb_player div.h5_lb_hdbutton_control {
+	width: 36px; padding: 0 10px 0 4px; cursor: pointer; margin: 9px 0 0; font: 10px/1.231 "bitstream vera sans", "lucida grande", verdana !important; text-shadow: 1px 1px 1px rgba(0,0,0,1); color: #fff;
+}
+.h5_lb_player div.h5_lb_hdbutton_control_active {
+	font-weight: bold !important;
+}
+/**********************/

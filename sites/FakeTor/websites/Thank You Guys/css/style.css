@@ -1,0 +1,39 @@
+hr {
+    background: none;
+    border: 0;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+body {
+    color:#000000;
+    background-color:#FFFFFF;
+    background-image:url('../images/bg.jpeg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-clip:border-box;
+    padding: auto;
+  }
+  a  { color:#0000FF; }
+  a:visited { color:#800080; }
+  a:hover { color:#008000; }
+  a:active { color:#FF0000; }
+
+  .card {
+      margin: 0 auto; /* Added */
+      float: none; /* Added */
+      margin-bottom: 10px; /* Added */
+}
+
+.surpriselink{
+color: blue;
+text-decoration:none;
+}
+.surpriselink:hover {
+color: red;
+text-decoration:underline;
+}

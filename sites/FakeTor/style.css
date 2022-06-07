@@ -1,0 +1,11 @@
+hr {
+background: none;
+border: 0;
+clear: both;
+display: block;
+float: none;
+font-size: 0;
+padding: 0;
+overflow: hidden;
+visibility: hidden;
+}

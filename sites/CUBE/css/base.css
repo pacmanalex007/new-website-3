@@ -1,0 +1,60 @@
+.die{
+background-color:black;
+}
+.proceed{
+font-weight:800;
+color:brown;
+}
+.welcome{
+font-style:italic;
+font-weight:800;
+}
+.cube{
+font-weight:600;
+color:red;
+font-size:3.75em;
+}
+.notice{
+font-size:1.5em;
+color:gray;
+}
+
+.mainDiv{
+  position: relative;
+  width: 206px;
+  height: 190px;
+  margin: 0px auto;
+  margin-top:100px;
+}
+.square{
+  width:100px;
+  height:100px;
+  background:#c52329;
+  border:solid 2px #FFF;
+  float:left;
+  transform: skew(180deg,210deg);
+  position: absolute;
+  top: 43px;
+}
+.square2{
+  width:100px;
+  height:100px;
+  background:#c52329;
+  border:solid 2px #FFF;
+  float:left;
+  transform: skew(180deg,150deg);
+  position: absolute;
+  left:102px;
+  top: 43px;
+}
+.square3{
+  width:100px;
+  height:100px;
+  background:#c52329;
+  border:solid 2px #FFF;
+  float:left;
+  transform: skew(180deg,180deg);
+  position: absolute;
+  left: 51px;
+  top: -61px;
+}

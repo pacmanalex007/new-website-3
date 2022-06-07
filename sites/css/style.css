@@ -1,0 +1,5 @@
+*{cursor:default;}
+body{background-color: black;}
+.welcome{font-size:3em;color:white;box-shadow:-2.5px 5px 25px 0.01em white;width:25%;}
+.under-construction{font-size:2em;color:green;} .update-1{font-size:2em;color:silver;}
+.click-to-enter{font-size:2em;color:lightblue;}

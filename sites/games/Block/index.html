@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New Website Games - Block (Free To Play)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="./js/jquery.min.js" type="text/javascript"></script>
+<script src="./js/jquery.timeago.js" type="text/javascript"></script>
+
+<style>
+    hr {
+      background: none;
+      border: 0;
+      clear: both;
+      display: block;
+      float: none;
+      font-size: 0;
+      padding: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    canvas {
+    border:5px solid #d3d3d3;
+    background-color: #f1f1f1;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+</style>
+</head>
+
+<body onload="startGame()">
+    
+<script>
+
+var myGamePiece;
+var myObstacles = [];
+var myScore;
+
+function startGame() {
+    myGamePiece = new component(30, 30, "red", 10, 120);
+    myScore = new component("30px", "Consolas", "black", 10, 30, "text");
+    mySound = new sound("sounds/bounce.mp3");
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 1500;
+        this.canvas.height = 550;
+        this.canvas.style.cursor = "none"; //hide the original cursor
+
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 1;
+        this.interval = setInterval(updateGameArea, 5);
+        window.addEventListener('keydown', function (e) {
+        myGameArea.key = e.keyCode;
+        })
+        window.addEventListener('keyup', function (e) {
+        myGameArea.key = false;
+        })
+        window.addEventListener('mousemove', function (e) {
+      myGameArea.x = e.pageX;
+      myGameArea.y = e.pageY;
+    })
+        },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    stop : function() {
+        clearInterval(this.interval);
+    }
+}
+
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;
+    this.x = x;
+    this.y = y;    
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (this.type == "text") {
+            ctx.font = this.width + " " + this.height;
+            ctx.fillStyle = color;
+            ctx.fillText(this.text, this.x, this.y);
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;        
+    }
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+}
+
+function updateGameArea() {
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    for (i = 0; i < myObstacles.length; i += 1) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+            myGameArea.stop();
+            return;
+            if (myGameArea.key && myGameArea.key == 82); {
+            myGameArea.clear();
+            myGameArea.start();
+            };
+        } 
+    }
+    
+
+    myGameArea.clear();
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+        x = myGameArea.canvas.width;
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 50;
+        maxGap = 300;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myObstacles.push(new component(30, height, "green", x, 0));
+        myObstacles.push(new component(30, x - height - gap, "green", x, height + gap));
+    }
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].speedX = -1;
+        myObstacles[i].newPos();
+        myObstacles[i].update();
+    }
+    myScore.text="SCORE: " + myGameArea.frameNo;
+    myScore.update();
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;
+    if (myGameArea.key && myGameArea.key == 87) {myGamePiece.speedY = -2; }
+    if (myGameArea.key && myGameArea.key == 83) {myGamePiece.speedY = 2; } 
+    if (myGameArea.key && myGameArea.key == 65) {myGamePiece.speedX = -2; }
+    if (myGameArea.key && myGameArea.key == 68) {myGamePiece.speedX = 2; }
+
+    if (myGameArea.x && myGameArea.y) {
+    myGamePiece.x = myGameArea.x;
+    myGamePiece.y = myGameArea.y;
+  }
+
+    myGamePiece.newPos();    
+    myGamePiece.update();
+}
+
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
+}
+
+function everyinterval(n) {
+    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    return false;
+}
+
+</script>
+
+
+<!-- <p style="font-size: 25px; text-align: center; color: rgb(154, 111, 209);">The score will count one point for each frame you manage to "stay alive".</p> -->
+
+<a href="./js/jquery.timeago.js"></a>
+<script>
+jQuery(document).ready(function() {
+jQuery("time.timeago").timeago();
+
+});
+</script>
+
+<hr style="margin-top: -25px; height: 1px; border-top: 1px solid rgb(17, 17, 17); border-bottom: 1px solid rgb(51, 51, 51); width: 98%;">
+
+<div class="container">
+<center>
+<h3 style="font-size: 25px; text-align: center; border:5px solid #d3d3d3; background-color: #f1f1f1; display: inline-block; width: 60%; height: 43px;">
+<b>Always take note of your end score.</b>
+<small><i>(leaderboard is at the bottom)</i></small></h3>
+<h3 style="font-size: 25px; text-align: center; border:5px solid #d3d3d3; background-color: #f1f1f1; display: inline-block; width: 25%; height: 45px;">
+<small> Controls: <i><b>W | A | S | D</b></i> or <i><b>MOUSE</b></i></small>
+</h3>
+
+        <!-- Container 1 -->
+
+<div class="container">
+        <div style="width: auto; height: auto; margin-top: 5px; display: inline-block;" class="panel panel-default">
+        <div class="panel-heading"><b>Recent Scores:</b> <small>In order</small></div>
+        <div class="panel-heading">As of <time class="timeago" datetime="2019-11-29T00:00">November 29, 2019</time> </div>
+        
+        <div class="panel-body">
+
+        </div>
+        
+        <div class="panel-footer">Leaderboard is updated & monitored by the staff.</div>
+        
+        </div>
+        </div>
+        
+        <!-- Container 2 -->
+
+        <div class="container">
+        <div style="width: auto; height: auto; margin-top: 5px; display: inline-block;" class="panel panel-default">
+        <div class="panel-heading"><b>All-time Leaderboard:</b> <small>In order</small></div>
+        <div class="panel-heading">As of <time class="timeago" datetime="2019-11-28T00:00">November 29, 2019</time> </div>
+
+        <div class="panel-body">
+        
+
+        </div>
+        <div class="panel-footer">Leaderboard is updated & monitored by the staff.</div>
+</center>
+
+<!-- <center>
+    <div class="container">
+        <div style="width:450px; height:auto; margin-top: 15px; display: inline-block;" class="panel panel-default">
+        <div class="panel-heading"><b>Microtransaction Zone:</b> </div>
+        <div class="panel-body">
+        <span class="badge badge-danger">LIMITED TIME OFFER*</span> Incrase score by +5000 - <b>Price: £500/$646.38</b> <small>Limited until December 1!</small>
+         </div>
+        <div class="panel-footer"><small>We accept credit/debit cards (Visa, Mastercard etc.) as well as PayPal transactions! All payments are final, if you want to refund please contact our support team <a href="">here</a>. Thank you.</small></div>
+</center> -->
+
+
+</body>
+</html>

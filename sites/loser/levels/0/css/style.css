@@ -1,0 +1,36 @@
+*{cursor:default;}
+
+.welcome{font-size:1.80em;color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.loser{font-size:1.5em;color:red;font-weight: 800;}
+.loser:hover{cursor:none;}
+.fuckyou{font-size:1.55;color:gray;font-family: 'Times New Roman', Times, serif;text-align:center;margin-top:75px;}
+
+/*.ifuckinghateyou{text-align:center;}*/
+
+/*.vid4u{font-size:3em;color:white;font-family: "Bebas Neue";}*/
+
+/*.continue{font-size:1.5em;color:goldenrod;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}*/
+
+/*.not-available-yet{opacity:0.3;}*/
+
+.welcome2lvl{font-size:1.75em;color:white;}
+
+hr {
+background: none;
+border: 0;
+clear: both;
+display: block;
+float: none;
+font-size: 0;
+padding: 0;
+overflow: hidden;
+visibility: hidden;
+}
+.dt{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}

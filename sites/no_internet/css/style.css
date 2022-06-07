@@ -1,0 +1,324 @@
+a {
+    color: var(--link-color);
+  }
+  
+  body {
+    --background-color: #fff;
+    --error-code-color: var(--google-gray-700);
+    --google-blue-100: rgb(210, 227, 252);
+    --google-blue-300: rgb(138, 180, 248);
+    --google-blue-600: rgb(26, 115, 232);
+    --google-blue-700: rgb(25, 103, 210);
+    --google-gray-100: rgb(241, 243, 244);
+    --google-gray-300: rgb(218, 220, 224);
+    --google-gray-500: rgb(154, 160, 166);
+    --google-gray-50: rgb(248, 249, 250);
+    --google-gray-600: rgb(128, 134, 139);
+    --google-gray-700: rgb(95, 99, 104);
+    --google-gray-800: rgb(60, 64, 67);
+    --google-gray-900: rgb(32, 33, 36);
+    --heading-color: var(--google-gray-900);
+    --link-color: rgb(88, 88, 88);
+    --popup-container-background-color: rgba(0,0,0,.65);
+    --primary-button-fill-color-active: var(--google-blue-700);
+    --primary-button-fill-color: var(--google-blue-600);
+    --primary-button-text-color: #fff;
+    --quiet-background-color: rgb(247, 247, 247);
+    --secondary-button-border-color: var(--google-gray-500);
+    --secondary-button-fill-color: #fff;
+    --secondary-button-hover-border-color: var(--google-gray-600);
+    --secondary-button-hover-fill-color: var(--google-gray-50);
+    --secondary-button-text-color: var(--google-gray-700);
+    --small-link-color: var(--google-gray-700);
+    --text-color: var(--google-gray-700);
+    background: var(--background-color);
+    color: var(--text-color);
+    word-wrap: break-word;
+  }
+  
+  .nav-wrapper .secondary-button {
+    background: var(--secondary-button-fill-color);
+    border: 1px solid var(--secondary-button-border-color);
+    color: var(--secondary-button-text-color);
+    float: none;
+    margin: 0;
+    padding: 8px 16px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  html {
+    -webkit-text-size-adjust: 100%;
+    font-size: 125%;
+  }
+  
+  .icon {
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      --background-color: var(--google-gray-900);
+      --error-code-color: var(--google-gray-500);
+      --heading-color: var(--google-gray-500);
+      --link-color: var(--google-blue-300);
+      --primary-button-fill-color-active: rgb(129, 162, 208);
+      --primary-button-fill-color: var(--google-blue-300);
+      --primary-button-text-color: var(--google-gray-900);
+      --quiet-background-color: var(--background-color);
+      --secondary-button-border-color: var(--google-gray-700);
+      --secondary-button-fill-color: var(--google-gray-900);
+      --secondary-button-hover-fill-color: rgb(48, 51, 57);
+      --secondary-button-text-color: var(--google-blue-300);
+      --small-link-color: var(--google-blue-300);
+      --text-color: var(--google-gray-500);
+    }
+  }
+  
+  h1 {
+    color: var(--heading-color);
+    font-size: 1.6em;
+    font-weight: normal;
+    line-height: 1.25em;
+    margin-bottom: 16px;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+  
+  .icon {
+    height: 72px;
+    margin: 0 0 40px;
+    width: 72px;
+  }
+  
+  input[type=checkbox] {
+    opacity: 0;
+  }
+  
+  input[type=checkbox]:focus ~ .checkbox:after {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 8px;
+    }
+  
+    .icon {
+      margin-bottom: 5.69vh;
+    }
+  
+    .interstitial-wrapper {
+      box-sizing: border-box;
+      margin: 7vh auto 12px;
+      padding: 0 24px;
+      position: relative;
+    }
+  
+    .interstitial-wrapper p {
+      font-size: .95em;
+      line-height: 1.61em;
+      margin-top: 8px;
+    }
+  
+    #main-content {
+      margin: 0;
+      transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    .small-link {
+      border: 0;
+    }
+  
+    .suggested-left > #control-buttons,
+    .suggested-right > #control-buttons {
+      float: none;
+      margin: 0;
+    }
+        
+  h1 {
+    margin-top: 0;
+    word-wrap: break-word;
+  }
+  
+  h1 span {
+    font-weight: 500;
+  }
+  
+  h2 {
+    color: var(--heading-color);
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 10px 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  #suggestions-list a {
+    color: var(--google-blue-600);
+  }
+  
+  #suggestions-list p {
+    margin-block-end: 0;
+  }
+  
+  #suggestions-list ul {
+    margin-top: 0;
+  }
+  
+  .single-suggestion {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  #short-suggestion {
+    margin-top: 5px;
+  }
+  
+  .use-popup-container#error-information-popup-container #suggestions-list p {
+    margin-inline-start: 20px;
+  }
+  
+  :not(.use-popup-container)#error-information-popup-container
+    #error-information-popup-close {
+    display: none;
+  }
+  
+  #error-information-popup-close {
+    margin-bottom: 0px;
+    margin-inline-end: 35px;
+    margin-top: 15px;
+    text-align: end;
+  }
+  
+  .link-button {
+    color: rgb(66, 133, 244);
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  #sub-frame-error-details {
+  
+    color: #8F8F8F;
+  
+    /* Not done on mobile for performance reasons. */
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  
+  }
+  
+  [jscontent=hostName],
+  [jscontent=failedUrl] {
+    overflow-wrap: break-word;
+  }
+  
+  #search-container {
+    /* Prevents a space between controls. */
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  #search-box {
+    border: 1px solid #cdcdcd;
+    flex-grow: 1;
+    font-size: 1em;
+    height: 26px;
+    margin-right: 0;
+    padding: 1px 9px;
+  }
+  
+  #search-box:focus {
+    border: 1px solid rgb(93, 154, 255);
+    outline: none;
+  }
+  
+  #search-button {
+    border: none;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    box-shadow: none;
+    display: flex;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+  }
+  
+  
+  .offline #main-message > p {
+    display: none;
+  }
+  
+  /* iOS WKWebView inverts the background color set at the HTML level
+  whereas Blink does not. */
+  .offline.inverted {
+    filter: invert(1);
+  
+    background-color: #000;
+  
+  
+  }
+  
+  .offline.inverted body {
+    background-color: #fff;
+  }
+  
+  .offline .interstitial-wrapper {
+    color: var(--text-color);
+    font-size: 1em;
+    line-height: 1.55;
+    margin: 0 auto;
+    max-width: 600px;
+    padding-top: 100px;
+    width: 100%;
+  }
+
+  
+  
+  @media (min-height: 240px) and (orientation: landscape) {
+    .offline .interstitial-wrapper {
+      margin-bottom: 90px;
+    }
+  
+    .icon-offline {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-height: 320px) and (orientation: landscape) {
+    .icon-offline {
+      margin-bottom: 0;
+    }
+  
+    .offline .runner-container {
+      top: 10px;
+    }
+  }
+  
+  @media (max-width: 240px) {
+    button {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  
+    .interstitial-wrapper {
+      overflow: inherit;
+      padding: 0 8px;
+    }
+  }
+  
+  @media (max-width: 120px) {
+    button {
+      width: auto;
+    }
+  }
+  
