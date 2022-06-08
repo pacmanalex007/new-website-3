@@ -1,5 +1,41 @@
-*{cursor:default;}
-body{background-color: black;}
-.welcome{font-size:3em;color:white;box-shadow:-2.5px 5px 25px 0.01em white;width:25%;}
-.under-construction{font-size:2em;color:green;} .update-1{font-size:2em;color:silver;}
-.click-to-enter{font-size:2em;color:lightblue;}
+@media screen {
+    *{cursor:default;}
+    body{background-color: black;}
+    .welcome{font-size:3em;color:white;box-shadow:-2.5px 5px 25px 0.01em white;width:25%;}
+    .nw3-updates-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-updates-list-2{font-size:1.25em;color:silver;font-weight:500;}
+    .nw3-workingon-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-workingon-list-2{font-size:1.25em;color:silver;font-weight:500;}
+    .nw3-added-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-added-list-2{font-size:1.25em;color:silver;font-weight:500;}
+    .nw3-changed-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-changed-list-2{font-size:1.25em;color:silver;font-weight:500;}
+    }
+    
+    @media only screen and (max-width : 1240px) {
+    *{cursor:default;}
+    body{background-color: black;}
+    .welcome{font-size:3em;color:white;box-shadow:-2.5px 5px 25px 0.01em white;width:25%;}
+    .nw3-updates-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-updates-list-2{font-size:1.25em;color:silver;font-weight:500;}
+    .nw3-workingon-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-workingon-list-2{font-size:1.25em;color:silver;font-weight:500;}
+    .nw3-added-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-added-list-2{font-size:1.25em;color:silver;font-weight:500;}
+    .nw3-changed-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-changed-list-2{font-size:1.25em;color:silver;font-weight:500;width:100%;}
+    }
+    
+    @media only screen and (max-width : 1080px) {
+    *{cursor:default;}
+    body{background-color: black;}
+    .welcome{font-size:2em;color:white;box-shadow:-2.5px 5px 25px 0.01em white;width:70%;}
+    .nw3-updates-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-updates-list-2{font-size:1em;color:silver;font-weight:500;}
+    .nw3-workingon-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-workingon-list-2{font-size:1em;color:silver;font-weight:500;}
+    .nw3-added-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-added-list-2{font-size:1em;color:silver;font-weight:500;}
+    .nw3-changed-list-1{font-size:1.25em;color:green;font-weight:700;margin-left:12px;}
+    .nw3-changed-list-2{font-size:1em;color:silver;font-weight:500;width:90%;}
+    }
