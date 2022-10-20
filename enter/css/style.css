@@ -9,6 +9,8 @@
     .site-directories{font-size:2em;color:white;box-shadow: 0px 0px 0.5em white;width:65%;}
     .site-names{text-decoration:none;color:rgb(238, 255, 0);cursor:pointer;}
     .site-category{font-size:1.5em;}
+    .album-image{width:85%;box-shadow: 0px 0px 0.5em gray;}
+    .fuckyoutonedon{font-size:0.55em;font-weight:700;color:gray;opacity:0.75;}    
     }
     
     
@@ -23,6 +25,8 @@
     .site-directories{font-size:2em;color:white;box-shadow: 0px 0px 0.5em white;width:65%;}
     .site-names{text-decoration:none;color:rgb(238, 255, 0);cursor:pointer;}
     .site-category{font-size:1.5em;}
+    .album-image{width:85%;box-shadow: 0px 0px 0.5em gray;}
+    .fuckyoutonedon{font-size:0.45em;font-weight:700;color:gray;opacity:0.75;}
     }
 
     @media only screen and (max-width : 1080px) {
@@ -36,6 +40,8 @@
     .site-directories{font-size:1.25em;color:white;box-shadow: 0px 0px 0.5em white;width:85%;}
     .site-names{text-decoration:none;color:rgb(238, 255, 0);cursor:pointer;}
     .site-category{font-size:1.5em;}
+    .album-image{width:85%;box-shadow: 0px 0px 0.5em gray;}
+    .fuckyoutonedon{font-size:0.35em;font-weight:700;color:gray;opacity:0.75;}
     }
     
     
